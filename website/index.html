@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shri Sai Baba Mandir — Bhupatwala, Haridwar | saiatharidwar.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --saffron:#E8701A;
+  --deep-saffron:#C45A10;
+  --gold:#D4A843;
+  --cream:#FDF6EC;
+  --warm-white:#FFFDF8;
+  --deep-maroon:#4A1020;
+  --temple-brown:#3D2B1F;
+  --ash:#F5F0E8;
+  --sacred-green:#2D5A3D;
+  --light-gold:#F0DEB4;
+  --text-dark:#2C1810;
+  --text-muted:#6B5B4F;
+  --border-subtle:rgba(212,168,67,0.2);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Noto Sans',sans-serif;color:var(--text-dark);background:var(--warm-white);overflow-x:hidden;line-height:1.7}
+.preloader{position:fixed;inset:0;background:var(--deep-maroon);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .8s,visibility .8s}
+.preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.preloader .om{font-size:4rem;color:var(--gold);font-family:'Playfair Display',serif;animation:pulse-om 1.5s ease-in-out infinite}
+.preloader p{color:var(--light-gold);margin-top:1rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;letter-spacing:0.3em}
+@keyframes pulse-om{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.15);opacity:1}}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
+nav.scrolled{background:rgba(74,16,32,.97);backdrop-filter:blur(12px);padding:.7rem 2rem;box-shadow:0 4px 30px rgba(0,0,0,.2)}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.nav-logo .om-mark{width:40px;height:40px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--deep-maroon);font-weight:700}
+.nav-logo-text{display:flex;flex-direction:column}
+.nav-logo-text span{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--gold);font-weight:700;letter-spacing:0.05em;line-height:1.2}
+.nav-logo-text small{font-size:.6rem;color:var(--light-gold);opacity:.6;letter-spacing:.2em;text-transform:uppercase}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--light-gold);text-decoration:none;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;position:relative;transition:color .3s;font-weight:500}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--gold);transition:width .3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{width:100%}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:101;background:none;border:none;padding:8px}
+.hamburger span{width:28px;height:2px;background:var(--gold);transition:all .3s;display:block}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(74,16,32,.98);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.mobile-menu.active{display:flex}
+.mobile-menu a{color:var(--light-gold);text-decoration:none;font-size:1.3rem;font-family:'Playfair Display',serif;letter-spacing:.1em}
+.hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--deep-maroon)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(232,112,26,.15) 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,rgba(212,168,67,.1) 0%,transparent 50%),linear-gradient(180deg,rgba(74,16,32,1) 0%,rgba(61,43,31,.95) 50%,rgba(44,24,16,1) 100%)}
+.hero-pattern{position:absolute;inset:0;opacity:.04;background-image:repeating-linear-gradient(0deg,transparent,transparent 50px,var(--gold) 50px,var(--gold) 51px),repeating-linear-gradient(90deg,transparent,transparent 50px,var(--gold) 50px,var(--gold) 51px)}
+.hero-content{position:relative;text-align:center;max-width:900px;padding:0 2rem}
+.hero-mandala{width:120px;height:120px;margin:0 auto 2rem;opacity:.6;animation:rotate-slow 60s linear infinite}
+.hero-mandala svg{width:100%;height:100%}
+@keyframes rotate-slow{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.hero-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold);letter-spacing:.4em;text-transform:uppercase;margin-bottom:1.5rem;animation:fade-up .8s ease-out .3s both}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,4.5rem);color:var(--cream);line-height:1.15;margin-bottom:1rem;animation:fade-up .8s ease-out .5s both}
+.hero-title em{font-style:italic;color:var(--gold)}
+.hero-desc{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:rgba(240,222,180,.7);max-width:600px;margin:0 auto 2.5rem;animation:fade-up .8s ease-out .7s both}
+.hero-cta{display:inline-flex;gap:1rem;flex-wrap:wrap;justify-content:center;animation:fade-up .8s ease-out .9s both}
+.btn{padding:.9rem 2.5rem;border:none;border-radius:0;font-family:'Noto Sans',sans-serif;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:all .3s;font-weight:600;display:inline-block}
+.btn-primary{background:var(--saffron);color:#fff}
+.btn-primary:hover{background:var(--deep-saffron);transform:translateY(-2px);box-shadow:0 8px 25px rgba(232,112,26,.3)}
+.btn-outline{background:transparent;color:var(--gold);border:1.5px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--deep-maroon)}
+.scroll-indicator{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--gold);opacity:.5;animation:bounce-soft 2s ease-in-out infinite}
+.scroll-indicator span{font-size:.65rem;letter-spacing:.3em;text-transform:uppercase}
+@keyframes bounce-soft{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+@keyframes fade-up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+section{padding:6rem 2rem}
+.section-header{text-align:center;margin-bottom:4rem}
+.section-label{font-family:'Cormorant Garamond',serif;font-size:.9rem;color:var(--saffron);letter-spacing:.4em;text-transform:uppercase;margin-bottom:.75rem}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);color:var(--text-dark);line-height:1.2;margin-bottom:1rem}
+.section-divider{width:60px;height:3px;background:linear-gradient(90deg,var(--saffron),var(--gold));margin:0 auto;border-radius:2px}
+.container{max-width:1200px;margin:0 auto}
+#about{background:var(--warm-white);position:relative;overflow:hidden}
+#about::before{content:'\0950';position:absolute;right:-3rem;top:50%;transform:translateY(-50%);font-size:20rem;font-family:'Playfair Display',serif;color:var(--saffron);opacity:.03;pointer-events:none}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-image{position:relative;aspect-ratio:4/5;background:linear-gradient(135deg,var(--deep-maroon),var(--temple-brown));overflow:hidden;display:flex;align-items:center;justify-content:center}
+.about-image .temple-icon{font-size:8rem;opacity:.3;color:var(--gold)}
+.about-image .overlay-text{position:absolute;bottom:2rem;left:2rem;right:2rem;color:var(--cream);font-family:'Playfair Display',serif;font-size:1.8rem;line-height:1.3;z-index:1}
+.about-image::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(74,16,32,.8) 0%,transparent 60%)}
+.about-text h3{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:1.5rem;color:var(--deep-maroon)}
+.about-text p{color:var(--text-muted);margin-bottom:1.2rem;font-size:.95rem}
+.about-text .highlight-box{background:linear-gradient(135deg,rgba(232,112,26,.06),rgba(212,168,67,.06));border-left:3px solid var(--saffron);padding:1.2rem 1.5rem;margin-top:1.5rem;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--deep-maroon);font-style:italic}
+#facts{background:var(--deep-maroon);color:var(--cream);position:relative;overflow:hidden}
+#facts::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(232,112,26,.08),transparent 50%),radial-gradient(ellipse at 80% 50%,rgba(212,168,67,.05),transparent 50%)}
+#facts .section-title{color:var(--cream)}
+#facts .section-label{color:var(--gold)}
+.facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;max-width:1100px;margin:0 auto}
+.fact-card{background:rgba(255,255,255,.04);border:1px solid rgba(212,168,67,.15);padding:2.5rem 2rem;text-align:center;transition:all .4s;position:relative;overflow:hidden}
+.fact-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--saffron),var(--gold));transform:scaleX(0);transition:transform .4s;transform-origin:left}
+.fact-card:hover::before{transform:scaleX(1)}
+.fact-card:hover{background:rgba(255,255,255,.08);transform:translateY(-4px)}
+.fact-number{font-family:'Playfair Display',serif;font-size:3rem;color:var(--gold);font-weight:700;line-height:1}
+.fact-label{font-size:.85rem;color:rgba(240,222,180,.6);letter-spacing:.15em;text-transform:uppercase;margin-top:.5rem}
+.fact-desc{font-family:'Cormorant Garamond',serif;font-size:1rem;color:rgba(240,222,180,.5);margin-top:.75rem}
+#timings{background:var(--ash)}
+.timings-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:900px;margin:0 auto}
+.timing-card{background:var(--warm-white);padding:2.5rem;border:1px solid var(--border-subtle)}
+.timing-card h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--deep-maroon);margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
+.timing-card h3 .icon{width:36px;height:36px;background:linear-gradient(135deg,var(--saffron),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem;flex-shrink:0}
+.timing-item{display:flex;justify-content:space-between;padding:.8rem 0;border-bottom:1px solid var(--border-subtle)}
+.timing-item:last-child{border-bottom:none}
+.timing-item .name{color:var(--text-dark);font-weight:500;font-size:.9rem}
+.timing-item .time{color:var(--saffron);font-weight:600;font-family:'Cormorant Garamond',serif;font-size:1.05rem}
+#events{background:var(--warm-white);position:relative}
+.events-timeline{max-width:900px;margin:0 auto;position:relative}
+.events-timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--saffron),var(--gold),var(--saffron));transform:translateX(-50%)}
+.event-item{display:flex;align-items:flex-start;margin-bottom:3rem;position:relative}
+.event-item:nth-child(odd){flex-direction:row-reverse}
+.event-item .event-content{width:45%;padding:2rem;background:var(--warm-white);border:1px solid var(--border-subtle);transition:all .3s}
+.event-item .event-content:hover{box-shadow:0 8px 30px rgba(232,112,26,.08);transform:translateY(-2px)}
+.event-item .event-dot{position:absolute;left:50%;top:2rem;transform:translateX(-50%);width:16px;height:16px;background:var(--saffron);border-radius:50%;border:3px solid var(--warm-white);box-shadow:0 0 0 2px var(--saffron);z-index:1}
+.event-month{font-family:'Cormorant Garamond',serif;font-size:.85rem;color:var(--saffron);letter-spacing:.3em;text-transform:uppercase;margin-bottom:.5rem;font-weight:600}
+.event-name{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--deep-maroon);margin-bottom:.5rem}
+.event-desc{font-size:.88rem;color:var(--text-muted);line-height:1.6}
+#saidham{background:linear-gradient(135deg,#f8f1e4 0%,var(--ash) 100%);position:relative;overflow:hidden}
+.saidham-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center;max-width:1100px;margin:0 auto}
+.saidham-visual{position:relative;background:linear-gradient(135deg,var(--sacred-green),#1a3d28);padding:3rem;min-height:420px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.saidham-visual::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.02) 20px,rgba(255,255,255,.02) 21px)}
+.saidham-visual .badge{display:inline-block;background:rgba(212,168,67,.2);border:1px solid rgba(212,168,67,.4);color:var(--gold);padding:.4rem 1.2rem;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;margin-bottom:1.5rem;align-self:flex-start}
+.saidham-visual h3{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--cream);margin-bottom:1rem;line-height:1.2}
+.saidham-visual p{color:rgba(240,222,180,.6);font-size:.95rem;margin-bottom:1.5rem;line-height:1.7}
+.saidham-features{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.saidham-feat{display:flex;align-items:center;gap:.6rem;color:var(--light-gold);font-size:.85rem}
+.saidham-feat .feat-dot{width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0}
+.saidham-info h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--deep-maroon);margin-bottom:1rem}
+.saidham-info>p{color:var(--text-muted);font-size:.95rem;margin-bottom:2rem;line-height:1.7}
+.dham-highlights{display:flex;flex-direction:column;gap:1.25rem}
+.dham-highlight{display:flex;gap:1rem;align-items:flex-start}
+.dham-highlight .dh-icon{width:48px;height:48px;min-width:48px;background:linear-gradient(135deg,rgba(45,90,61,.08),rgba(45,90,61,.15));display:flex;align-items:center;justify-content:center;font-size:1.3rem;border-radius:8px}
+.dham-highlight .dh-text strong{display:block;font-size:.9rem;color:var(--text-dark);margin-bottom:.15rem}
+.dham-highlight .dh-text span{font-size:.85rem;color:var(--text-muted);line-height:1.5}
+.saidham-cta{margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap}
+.btn-green{background:var(--sacred-green);color:#fff;padding:.8rem 2rem;border:none;font-family:'Noto Sans',sans-serif;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;font-weight:600;transition:all .3s;text-decoration:none;display:inline-block}
+.btn-green:hover{background:#1a3d28;transform:translateY(-2px);box-shadow:0 8px 25px rgba(45,90,61,.25)}
+.btn-outline-green{background:transparent;color:var(--sacred-green);border:1.5px solid var(--sacred-green);padding:.8rem 2rem;font-family:'Noto Sans',sans-serif;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;font-weight:600;transition:all .3s;text-decoration:none;display:inline-block}
+.btn-outline-green:hover{background:var(--sacred-green);color:#fff}
+#gallery{background:var(--deep-maroon);padding:6rem 0}
+#gallery .section-title{color:var(--cream)}
+#gallery .section-label{color:var(--gold)}
+#gallery .section-header{padding:0 2rem}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:250px;gap:4px;margin-top:3rem}
+.gallery-item{position:relative;overflow:hidden;cursor:pointer;background:linear-gradient(135deg,rgba(232,112,26,.15),rgba(61,43,31,.9))}
+.gallery-item:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gallery-item:nth-child(5){grid-column:span 2}
+.gallery-item .gallery-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(74,16,32,.85) 0%,transparent 60%);opacity:0;transition:opacity .4s;display:flex;align-items:flex-end;padding:1.5rem}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-item .gallery-overlay span{color:var(--cream);font-family:'Playfair Display',serif;font-size:1.1rem}
+.gallery-item .placeholder-content{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;color:var(--gold);opacity:.4}
+.gallery-item .placeholder-content .gi-icon{font-size:2rem}
+.gallery-item .placeholder-content span{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase}
+#instagram{background:var(--warm-white);position:relative;overflow:hidden}
+.insta-header{display:flex;align-items:center;justify-content:center;gap:1rem;margin-bottom:.5rem}
+.insta-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);display:flex;align-items:center;justify-content:center}
+.insta-icon svg{width:26px;height:26px;fill:#fff}
+.insta-handle{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--text-dark)}
+.insta-handle a{color:var(--saffron);text-decoration:none;font-weight:600;transition:color .3s}
+.insta-handle a:hover{color:var(--deep-saffron)}
+.insta-feed{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;max-width:1200px;margin:2.5rem auto 0}
+.insta-post{aspect-ratio:1;position:relative;overflow:hidden;cursor:pointer;background:linear-gradient(135deg,rgba(232,112,26,.08),rgba(212,168,67,.08));border:1px solid var(--border-subtle);transition:transform .3s}
+.insta-post:hover{transform:scale(1.03)}
+.insta-post .insta-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.4rem;color:var(--saffron);opacity:.35;transition:opacity .3s}
+.insta-post:hover .insta-placeholder{opacity:.55}
+.insta-post .insta-placeholder .ip-icon{font-size:1.8rem}
+.insta-post .insta-placeholder span{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase}
+.insta-follow-bar{text-align:center;margin-top:2.5rem}
+.btn-insta{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 2.2rem;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;border:none;font-family:'Noto Sans',sans-serif;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-weight:600;transition:all .3s;text-decoration:none;border-radius:2px}
+.btn-insta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(220,39,67,.3)}
+.btn-insta svg{width:18px;height:18px;fill:#fff}
+.insta-note{text-align:center;margin-top:1rem;font-size:.78rem;color:var(--text-muted);font-style:italic}
+#services{background:var(--ash)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1100px;margin:0 auto}
+.service-card{background:var(--warm-white);padding:2.5rem 2rem;border:1px solid var(--border-subtle);transition:all .4s;position:relative;overflow:hidden}
+.service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--saffron),var(--gold));transform:scaleX(0);transition:transform .4s;transform-origin:right}
+.service-card:hover::after{transform:scaleX(1);transform-origin:left}
+.service-card:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(0,0,0,.06)}
+.service-icon{width:50px;height:50px;background:linear-gradient(135deg,rgba(232,112,26,.1),rgba(212,168,67,.1));display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;font-size:1.5rem}
+.service-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--deep-maroon);margin-bottom:.75rem}
+.service-card p{font-size:.88rem;color:var(--text-muted);line-height:1.7}
+#contact{background:var(--warm-white);position:relative;overflow:hidden}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;max-width:1100px;margin:0 auto}
+.contact-info h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--deep-maroon);margin-bottom:2rem}
+.contact-detail{display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-start}
+.contact-detail .cd-icon{width:42px;height:42px;min-width:42px;background:linear-gradient(135deg,rgba(232,112,26,.08),rgba(212,168,67,.08));display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--saffron)}
+.contact-detail .cd-text strong{display:block;font-size:.85rem;color:var(--text-dark);margin-bottom:.2rem}
+.contact-detail .cd-text span{font-size:.88rem;color:var(--text-muted)}
+.contact-detail .cd-text a{color:var(--saffron);text-decoration:none}
+.contact-detail .cd-text a:hover{text-decoration:underline}
+.contact-form{background:var(--ash);padding:3rem;border:1px solid var(--border-subtle)}
+.form-group{margin-bottom:1.5rem}
+.form-group label{display:block;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem;font-weight:500}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:.9rem 1rem;border:1px solid var(--border-subtle);background:var(--warm-white);font-family:'Noto Sans',sans-serif;font-size:.9rem;color:var(--text-dark);transition:border-color .3s;outline:none}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--saffron)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.btn-submit{width:100%;padding:1rem;background:var(--saffron);color:#fff;border:none;font-family:'Noto Sans',sans-serif;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;font-weight:600;transition:all .3s}
+.btn-submit:hover{background:var(--deep-saffron);box-shadow:0 8px 25px rgba(232,112,26,.25)}
+#map-section{padding:0}
+.map-container{width:100%;height:450px;background:var(--temple-brown);position:relative;overflow:hidden}
+.map-container iframe{width:100%;height:100%;border:none}
+.map-overlay{position:absolute;top:2rem;left:2rem;background:rgba(74,16,32,.94);backdrop-filter:blur(10px);padding:1.5rem 2rem;color:var(--cream);max-width:340px;border-left:3px solid var(--gold)}
+.map-overlay h4{font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:.5rem;color:var(--gold)}
+.map-overlay p{font-size:.85rem;color:rgba(240,222,180,.7);line-height:1.6}
+.map-overlay a{color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:.4rem;margin-top:.75rem;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;transition:opacity .3s}
+.map-overlay a:hover{opacity:.7}
+footer{background:var(--deep-maroon);color:var(--cream);padding:4rem 2rem 2rem;position:relative;overflow:hidden}
+footer::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(232,112,26,.06),transparent 60%)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;max-width:1200px;margin:0 auto;position:relative}
+.footer-about h4{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold);margin-bottom:1rem}
+.footer-about p{font-size:.85rem;color:rgba(240,222,180,.5);line-height:1.7}
+.footer-about .footer-domain{display:inline-block;margin-top:.75rem;color:var(--gold);font-weight:600;font-size:.85rem;letter-spacing:.05em}
+.footer-links h5{font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold);margin-bottom:1rem;letter-spacing:.05em}
+.footer-links ul{list-style:none}
+.footer-links li{margin-bottom:.6rem}
+.footer-links a{color:rgba(240,222,180,.5);text-decoration:none;font-size:.83rem;transition:color .3s}
+.footer-links a:hover{color:var(--gold)}
+.footer-social{display:flex;gap:.75rem;margin-top:1rem}
+.footer-social a{width:36px;height:36px;border:1px solid rgba(212,168,67,.3);display:flex;align-items:center;justify-content:center;color:var(--gold);text-decoration:none;font-size:.85rem;transition:all .3s}
+.footer-social a:hover{background:var(--gold);color:var(--deep-maroon)}
+.footer-bottom{text-align:center;padding-top:2.5rem;margin-top:2.5rem;border-top:1px solid rgba(212,168,67,.1);position:relative;max-width:1200px;margin-left:auto;margin-right:auto}
+.footer-bottom p{font-size:.78rem;color:rgba(240,222,180,.35);letter-spacing:.05em}
+.footer-bottom .mantra{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--gold);opacity:.5;margin-bottom:.5rem;letter-spacing:.2em}
+.reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:968px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .about-grid,.saidham-grid{grid-template-columns:1fr;gap:2rem}
+  .about-image{max-height:350px}
+  .saidham-visual{min-height:auto;padding:2.5rem}
+  .timings-wrapper{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .events-timeline::before{left:1rem}
+  .event-item,.event-item:nth-child(odd){flex-direction:column;padding-left:3rem}
+  .event-item .event-content{width:100%}
+  .event-item .event-dot{left:1rem;top:0}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
+  .gallery-item:nth-child(1){grid-column:span 2}
+  .gallery-item:nth-child(5){grid-column:span 1}
+  .insta-feed{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:600px){
+  section{padding:4rem 1.25rem}
+  .hero-title{font-size:2rem}
+  .form-row{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr;grid-auto-rows:180px}
+  .gallery-item:nth-child(1){grid-column:span 1;grid-row:span 1}
+  .facts-grid{grid-template-columns:1fr 1fr}
+  .insta-feed{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+  .saidham-features{grid-template-columns:1fr}
+  .saidham-cta{flex-direction:column}
+  .saidham-cta a,.saidham-cta button{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="preloader" id="preloader"><div class="om">&#x0950;</div><p>Om Sai Ram</p></div>
+<nav id="navbar">
+  <a href="#" class="nav-logo"><div class="om-mark">&#x0950;</div><div class="nav-logo-text"><span>Sai Baba Mandir</span><small>saiatharidwar.com</small></div></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#timings">Darshan</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#saidham">Sai Dham</a></li>
+    <li><a href="#instagram">Instagram</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#timings" onclick="toggleMenu()">Darshan</a>
+  <a href="#events" onclick="toggleMenu()">Events</a>
+  <a href="#saidham" onclick="toggleMenu()">Sai Dham</a>
+  <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+  <a href="#instagram" onclick="toggleMenu()">Instagram</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-mandala"><svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="60" r="55" stroke="#D4A843" stroke-width=".5" opacity=".4"/><circle cx="60" cy="60" r="45" stroke="#D4A843" stroke-width=".5" opacity=".3"/><circle cx="60" cy="60" r="35" stroke="#D4A843" stroke-width=".5" opacity=".3"/><circle cx="60" cy="60" r="25" stroke="#D4A843" stroke-width=".5" opacity=".4"/><path d="M60 5 L60 115 M5 60 L115 60 M17 17 L103 103 M103 17 L17 103" stroke="#D4A843" stroke-width=".3" opacity=".2"/><circle cx="60" cy="60" r="8" fill="#D4A843" opacity=".15"/><text x="60" y="66" text-anchor="middle" fill="#D4A843" font-size="16" font-family="serif" opacity=".6">&#x0950;</text></svg></div>
+    <div class="hero-subtitle">Shri Sai Baba Charitable Trust &mdash; Haridwar</div>
+    <h1 class="hero-title">The First Sai Baba Temple<br>in the Holy City of <em>Haridwar</em></h1>
+    <p class="hero-desc">Nestled in the sacred heart of Bhupatwala, near Har Ki Pauri &mdash; serving devotees with love, faith and compassion since 1994.</p>
+    <div class="hero-cta"><a href="#timings" class="btn btn-primary">Darshan Timings</a><a href="#saidham" class="btn btn-outline">Stay at Sai Dham</a></div>
+  </div>
+  <div class="scroll-indicator"><span>Scroll</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 12l6 6 6-6" stroke="#D4A843" stroke-width="1.5"/></svg></div>
+</section>
+<section id="about">
+  <div class="container">
+    <div class="section-header reveal"><div class="section-label">Our Sacred Heritage</div><h2 class="section-title">About the Temple</h2><div class="section-divider"></div></div>
+    <div class="about-grid">
+      <div class="about-image reveal"><div class="temple-icon">&#x1F64F;</div><div class="overlay-text">A beacon of faith since 1994</div></div>
+      <div class="about-text reveal">
+        <h3>Shri Sai Baba Mandir, Bhupatwala</h3>
+        <p>This is the first Shirdi Sai Baba temple established in the holy city of Haridwar. The land for the Mandir was acquired in September 1990 in the name of Pt. Chunilal, and the Sai Baba Charitable Trust Parashuram Ashram was formed in September 1991.</p>
+        <p>The foundation was laid the same year, and after three and a half years of devoted construction funded entirely by devotees' donations, the temple was inaugurated on 5th May 1994 by Shri A.K. Tailor of Rishikesh.</p>
+        <p>Baba's sacred Dhuni was specially brought from Shirdi by Shri Kote Patil, a Trustee of Shri Saibaba Sansthan Trust, Shirdi. For the Pran Pratishtha ceremony, nine Havan Kunds were prepared and a week-long puja was conducted in the Vedic tradition by 51 Acharyas.</p>
+        <div class="highlight-box">&ldquo;Sabka Malik Ek&rdquo; &mdash; One God governs all. The temple has grown from 5 founder trustees in 1991 to 21 trustees since 1998, and a magnificent 45 kg silver Simhasan was installed in May 2001.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="facts">
+  <div class="section-header reveal"><div class="section-label">Sacred Numbers</div><h2 class="section-title">Key Facts</h2><div class="section-divider"></div></div>
+  <div class="facts-grid reveal">
+    <div class="fact-card"><div class="fact-number">1994</div><div class="fact-label">Established</div><div class="fact-desc">Inaugurated on 5th May 1994</div></div>
+    <div class="fact-card"><div class="fact-number">1st</div><div class="fact-label">Sai Temple</div><div class="fact-desc">First Sai Baba Mandir in Haridwar</div></div>
+    <div class="fact-card"><div class="fact-number">51</div><div class="fact-label">Acharyas</div><div class="fact-desc">Week-long Vedic Pran Pratishtha ceremony</div></div>
+    <div class="fact-card"><div class="fact-number">45 kg</div><div class="fact-label">Silver Simhasan</div><div class="fact-desc">Installed in May 2001</div></div>
+    <div class="fact-card"><div class="fact-number">9</div><div class="fact-label">Havan Kunds</div><div class="fact-desc">For the sacred Pran Pratishtha ceremony</div></div>
+    <div class="fact-card"><div class="fact-number">21</div><div class="fact-label">Trustees</div><div class="fact-desc">Expanded from 5 founders since 1998</div></div>
+    <div class="fact-card"><div class="fact-number">30+</div><div class="fact-label">Years of Seva</div><div class="fact-desc">Three decades of devoted service</div></div>
+    <div class="fact-card"><div class="fact-number">&infin;</div><div class="fact-label">Blessings</div><div class="fact-desc">Baba's grace upon all who visit</div></div>
+  </div>
+</section>
+<section id="timings">
+  <div class="container">
+    <div class="section-header reveal"><div class="section-label">Daily Schedule</div><h2 class="section-title">Darshan &amp; Aarti Timings</h2><div class="section-divider"></div></div>
+    <div class="timings-wrapper reveal">
+      <div class="timing-card">
+        <h3><span class="icon">&#9728;</span>Morning Schedule</h3>
+        <div class="timing-item"><span class="name">Temple Opens</span><span class="time">6:00 AM</span></div>
+        <div class="timing-item"><span class="name">Kakad Aarti</span><span class="time">6:00 AM</span></div>
+        <div class="timing-item"><span class="name">Holy Bath of Baba</span><span class="time">7:00 AM</span></div>
+        <div class="timing-item"><span class="name">Abhishekam</span><span class="time">7:30 AM</span></div>
+        <div class="timing-item"><span class="name">Madhyanha Aarti</span><span class="time">12:00 PM</span></div>
+      </div>
+      <div class="timing-card">
+        <h3><span class="icon">&#127769;</span>Evening Schedule</h3>
+        <div class="timing-item"><span class="name">Bhajan / Kirtan</span><span class="time">5:00 PM</span></div>
+        <div class="timing-item"><span class="name">Dhup Aarti</span><span class="time">6:30 PM</span></div>
+        <div class="timing-item"><span class="name">Sai Satcharitra Parayan</span><span class="time">7:00 PM</span></div>
+        <div class="timing-item"><span class="name">Shej Aarti</span><span class="time">9:00 PM</span></div>
+        <div class="timing-item"><span class="name">Temple Closes</span><span class="time">9:30 PM</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="events">
+  <div class="container">
+    <div class="section-header reveal"><div class="section-label">Celebrations</div><h2 class="section-title">Events Across the Year</h2><div class="section-divider"></div></div>
+    <div class="events-timeline reveal">
+      <div class="event-item"><div class="event-dot"></div><div class="event-content"><div class="event-month">January</div><div class="event-name">Makar Sankranti &amp; New Year Celebrations</div><div class="event-desc">Special puja and distribution of prasad as devotees welcome the new year with Baba's blessings. Community Annadanam for the needy.</div></div></div>
+      <div class="event-item"><div class="event-dot"></div><div class="event-content"><div class="event-month">March / April</div><div class="event-name">Ram Navami &mdash; Sai Baba's Birth Anniversary</div><div class="event-desc">Grand three-day celebration with elaborate Havan, Bhajan Sandhya, processions, and Maha Prasad. One of the most significant festivals at the temple.</div></div></div>
+      <div class="event-item"><div class="event-dot"></div><div class="event-content"><div class="event-month">May</div><div class="event-name">Temple Anniversary &mdash; Sthapana Divas</div><div class="event-desc">Commemorating the inauguration on 5th May 1994 with week-long special pujas, cultural programs, and community feasts.</div></div></div>
+      <div class="event-item"><div class="event-dot"></div><div class="event-content"><div class="event-month">July</div><div class="event-name">Guru Purnima</div><div class="event-desc">Celebrating the divine Guru with special Abhishekam, Sai Satcharitra Parayan, and devotional music sessions honouring Baba as the eternal Guru.</div></div></div>
+      <div class="event-item"><div class="event-dot"></div><div class="event-content"><div class="event-month">August / September</div><div class="event-name">Ganesh Chaturthi &amp; Janmashtami</div><div class="event-desc">Festive celebrations with Baba's darshan, special decorations, and community prayers. Midnight Janmashtami celebrations with Bhajan programs.</div></div></div>
+      <div class="event-item"><div class="event-dot"></div><div class="event-content"><div class="event-month">September / October</div><div class="event-name">Vijayadashami &mdash; Sai Baba Punyatithi</div><div class="event-desc">Solemn remembrance of Baba's Mahasamadhi with three-day observance including Padyatra, Palki procession, and special Aarti sessions.</div></div></div>
+      <div class="event-item"><div class="event-dot"></div><div class="event-content"><div class="event-month">October / November</div><div class="event-name">Diwali &amp; Kartik Purnima</div><div class="event-desc">Temple illuminated with thousands of diyas. Special Lakshmi Puja, fireworks, and distribution of sweets to the community.</div></div></div>
+      <div class="event-item"><div class="event-dot"></div><div class="event-content"><div class="event-month">Every Thursday</div><div class="event-name">Weekly Sai Baba Vrat &amp; Bhajan</div><div class="event-desc">Thursday is Baba's special day &mdash; special Aarti, Sai Satcharitra reading, Bhajan-Kirtan, and community Annadanam for devotees.</div></div></div>
+    </div>
+  </div>
+</section>
+<section id="saidham">
+  <div class="container">
+    <div class="section-header reveal"><div class="section-label">Devotee Accommodation</div><h2 class="section-title">Stay at Sai Dham</h2><div class="section-divider"></div></div>
+    <div class="saidham-grid reveal">
+      <div class="saidham-visual">
+        <div class="badge">Affordable Dharamshala</div>
+        <h3>Sai Dham<br>Devotee Guest House</h3>
+        <p>A peaceful and affordable dharamshala right next to Sai Baba Mandir, offering comfortable accommodation for pilgrims and devotees visiting Haridwar.</p>
+        <div class="saidham-features">
+          <div class="saidham-feat"><span class="feat-dot"></span>Clean &amp; Spacious Rooms</div>
+          <div class="saidham-feat"><span class="feat-dot"></span>Attached Bathrooms</div>
+          <div class="saidham-feat"><span class="feat-dot"></span>AC &amp; Non-AC Options</div>
+          <div class="saidham-feat"><span class="feat-dot"></span>Hot Water Supply</div>
+          <div class="saidham-feat"><span class="feat-dot"></span>24/7 Security</div>
+          <div class="saidham-feat"><span class="feat-dot"></span>Vegetarian Meals</div>
+          <div class="saidham-feat"><span class="feat-dot"></span>Parking Available</div>
+          <div class="saidham-feat"><span class="feat-dot"></span>Adjacent to Temple</div>
+        </div>
+      </div>
+      <div class="saidham-info">
+        <h3>Your Home in Haridwar</h3>
+        <p>Sai Dham dharamshala is located right next to Shri Sai Baba Mandir at Bhupatwala, offering pilgrims and devotees a comfortable, clean, and affordable place to stay during their visit to the holy city. Whether you're here for darshan, Ganga Aarti at Har Ki Pauri, or attending temple festivals &mdash; Sai Dham is the perfect base for your spiritual journey.</p>
+        <div class="dham-highlights">
+          <div class="dham-highlight"><div class="dh-icon">&#x1F4CD;</div><div class="dh-text"><strong>Prime Location</strong><span>Right next to Sai Baba Mandir, Bhupatwala Chowk. Easy access to Har Ki Pauri, Ganga ghats, and all major temples.</span></div></div>
+          <div class="dham-highlight"><div class="dh-icon">&#x1F4B0;</div><div class="dh-text"><strong>Affordable Rates</strong><span>Budget-friendly rooms for families, groups, and solo pilgrims. Special rates for extended stays.</span></div></div>
+          <div class="dham-highlight"><div class="dh-icon">&#x1F64F;</div><div class="dh-text"><strong>Spiritual Atmosphere</strong><span>Wake up to the sound of Kakad Aarti. The temple is just steps away &mdash; attend all four daily Aartis with ease.</span></div></div>
+          <div class="dham-highlight"><div class="dh-icon">&#x1F37D;</div><div class="dh-text"><strong>Meals &amp; Prasad</strong><span>Pure vegetarian meals available. Devotees can partake in the temple's Annadanam on Thursdays and festivals.</span></div></div>
+        </div>
+        <div class="saidham-cta"><a href="#contact" class="btn-green">Enquire for Booking</a><a href="#contact" class="btn-outline-green">Call for Availability</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="gallery">
+  <div class="section-header reveal"><div class="section-label">Divine Moments</div><h2 class="section-title">Photo Gallery</h2><div class="section-divider"></div></div>
+  <div class="gallery-grid reveal">
+    <div class="gallery-item"><div class="placeholder-content"><span class="gi-icon">&#x1F64F;</span><span>Main Temple Sanctum</span></div><div class="gallery-overlay"><span>Sai Baba's Idol with Silver Simhasan</span></div></div>
+    <div class="gallery-item"><div class="placeholder-content"><span class="gi-icon">&#x1F525;</span><span>Sacred Dhuni</span></div><div class="gallery-overlay"><span>Baba's Dhuni &mdash; brought from Shirdi</span></div></div>
+    <div class="gallery-item"><div class="placeholder-content"><span class="gi-icon">&#x1F3B5;</span><span>Evening Aarti</span></div><div class="gallery-overlay"><span>Dhup Aarti Ceremony</span></div></div>
+    <div class="gallery-item"><div class="placeholder-content"><span class="gi-icon">&#x1F3DB;</span><span>Temple Exterior</span></div><div class="gallery-overlay"><span>Mandir at Bhupatwala Chowk</span></div></div>
+    <div class="gallery-item"><div class="placeholder-content"><span class="gi-icon">&#x1F389;</span><span>Ram Navami</span></div><div class="gallery-overlay"><span>Grand Ram Navami Celebrations</span></div></div>
+    <div class="gallery-item"><div class="placeholder-content"><span class="gi-icon">&#x1F3E0;</span><span>Sai Dham</span></div><div class="gallery-overlay"><span>Sai Dham Dharamshala</span></div></div>
+    <div class="gallery-item"><div class="placeholder-content"><span class="gi-icon">&#x1F372;</span><span>Annadanam</span></div><div class="gallery-overlay"><span>Free Community Meals</span></div></div>
+    <div class="gallery-item"><div class="placeholder-content"><span class="gi-icon">&#x1FA94;</span><span>Diwali</span></div><div class="gallery-overlay"><span>Temple Illuminated on Diwali</span></div></div>
+  </div>
+</section>
+<section id="instagram">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="insta-header">
+        <div class="insta-icon"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+        <div class="insta-handle">Follow us <a href="https://www.instagram.com/saiatharidwar/" target="_blank" rel="noopener">@saiatharidwar</a></div>
+      </div>
+      <div class="section-label" style="margin-top:.5rem">Latest from Our Temple</div>
+      <h2 class="section-title">Instagram Feed</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="insta-feed reveal">
+      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F64F;</span><span>Morning Aarti</span></div></div>
+      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1FA94;</span><span>Dhuni Darshan</span></div></div>
+      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F3B5;</span><span>Bhajan Sandhya</span></div></div>
+      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F338;</span><span>Festival Decor</span></div></div>
+      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F372;</span><span>Annadanam</span></div></div>
+      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F305;</span><span>Ganga at Sunrise</span></div></div>
+      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F4FF;</span><span>Sai Satcharitra</span></div></div>
+      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F3DB;</span><span>Temple View</span></div></div>
+      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x2728;</span><span>Baba's Blessings</span></div></div>
+      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F38A;</span><span>Guru Purnima</span></div></div>
+      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F33A;</span><span>Flower Offerings</span></div></div>
+      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F549;</span><span>Om Sai Ram</span></div></div>
+    </div>
+    <div class="insta-follow-bar reveal">
+      <a href="https://www.instagram.com/saiatharidwar/" target="_blank" rel="noopener" class="btn-insta"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Follow @saiatharidwar on Instagram</a>
+    </div>
+    <p class="insta-note">For live Instagram feed integration, use Elfsight, Behold.so, or SnapWidget &mdash; see HTML comments for setup instructions.</p>
+  </div>
+</section>
+<section id="services">
+  <div class="container">
+    <div class="section-header reveal"><div class="section-label">Charitable Activities</div><h2 class="section-title">Our Seva &amp; Services</h2><div class="section-divider"></div></div>
+    <div class="services-grid reveal">
+      <div class="service-card"><div class="service-icon">&#x1F549;</div><h3>Daily Aarti &amp; Puja</h3><p>Four Aartis performed daily &mdash; Kakad, Madhyanha, Dhup, and Shej Aarti following the traditional Shirdi Sai Baba rituals. Abhishekam and Holy Bath ceremonies.</p></div>
+      <div class="service-card"><div class="service-icon">&#x1F372;</div><h3>Annadanam</h3><p>Free community meals served to devotees and the needy every Thursday and during festivals, embodying Baba's teaching of service to humanity.</p></div>
+      <div class="service-card"><div class="service-icon">&#x1F4D6;</div><h3>Sai Satcharitra Parayan</h3><p>Regular readings of the Sai Satcharitra &mdash; the holy scripture of Sai Baba's life and teachings. Weekly and special occasion group readings.</p></div>
+      <div class="service-card"><div class="service-icon">&#x1F3B5;</div><h3>Bhajan &amp; Kirtan</h3><p>Devotional music sessions and community singing. Special Bhajan Sandhya events during festivals and Thursdays.</p></div>
+      <div class="service-card"><div class="service-icon">&#x1F9D8;</div><h3>Yoga &amp; Meditation</h3><p>Classes conducted at the temple premises for the physical and spiritual wellbeing of the community.</p></div>
+      <div class="service-card"><div class="service-icon">&#x2764;</div><h3>Charitable Trust Activities</h3><p>Support for religious, cultural, educational and charitable activities. Medical camps, educational programs, and welfare initiatives.</p></div>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="container">
+    <div class="section-header reveal"><div class="section-label">Reach Us</div><h2 class="section-title">Get in Touch</h2><div class="section-divider"></div></div>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <h3>Visit the Temple</h3>
+        <div class="contact-detail"><div class="cd-icon">&#x1F4CD;</div><div class="cd-text"><strong>Address</strong><span>Shri Sai Baba Mandir, Parashuram Ashram (R),<br>Rishikesh Bye Pass Road, Bhupatwala Chowk,<br>Haridwar, Uttarakhand &mdash; 249410, India</span></div></div>
+        <div class="contact-detail"><div class="cd-icon">&#x1F550;</div><div class="cd-text"><strong>Temple Hours</strong><span>6:00 AM &mdash; 9:30 PM (All days)</span></div></div>
+        <div class="contact-detail"><div class="cd-icon">&#x1F310;</div><div class="cd-text"><strong>Website</strong><span><a href="https://saiatharidwar.com">saiatharidwar.com</a></span></div></div>
+        <div class="contact-detail"><div class="cd-icon">&#x1F4F8;</div><div class="cd-text"><strong>Instagram</strong><span><a href="https://www.instagram.com/saiatharidwar/" target="_blank" rel="noopener">@saiatharidwar</a></span></div></div>
+        <div class="contact-detail"><div class="cd-icon">&#x1F4E7;</div><div class="cd-text"><strong>Email</strong><span><a href="mailto:info@saiatharidwar.com">info@saiatharidwar.com</a></span></div></div>
+        <div class="contact-detail"><div class="cd-icon">&#x1F4CC;</div><div class="cd-text"><strong>Nearby Landmark</strong><span>Near Har Ki Pauri &mdash; the sacred heart of Haridwar</span></div></div>
+        <div class="contact-detail"><div class="cd-icon">&#x1F3E0;</div><div class="cd-text"><strong>Sai Dham Dharamshala</strong><span>Adjacent to temple &mdash; affordable rooms for devotees.<br><a href="#saidham">View details &rarr;</a></span></div></div>
+      </div>
+      <div class="contact-form">
+        <div class="form-row"><div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name"></div><div class="form-group"><label>Phone</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div></div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="your.email@example.com"></div>
+        <div class="form-group"><label>Subject</label><select><option value="">Select a topic</option><option>General Inquiry</option><option>Sai Dham Room Booking</option><option>Donation / Sponsorship</option><option>Event / Festival Information</option><option>Volunteer with Us</option><option>Puja Booking</option><option>Other</option></select></div>
+        <div class="form-group"><label>Your Message</label><textarea placeholder="Write your message here..."></textarea></div>
+        <button class="btn-submit" onclick="alert('Om Sai Ram! Thank you for your message. We will get back to you soon.')">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="map-section">
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d78.1836528!3d29.9815609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390947434414a6ed%3A0x798702a533d4d99c!2sShri%20Sai%20Baba%20Charitable%20Trust!5e0!3m2!1sen!2sin!4v1712600000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <div class="map-overlay">
+      <h4>Find Us on Google Maps</h4>
+      <p>Shri Sai Baba Mandir,<br>Parashuram Ashram (R), Rishikesh Bye Pass Road,<br>Bhupatwala Chowk, Haridwar 249410</p>
+      <a href="https://maps.app.goo.gl/inqPKtHPKZM3QvPt5" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-about">
+      <h4>Shri Sai Baba Charitable Trust</h4>
+      <p>Parashuram Ashram, Bhupatwala, Haridwar. Serving the community since 1994 with devotion, compassion and the eternal teachings of Shirdi Sai Baba &mdash; &ldquo;Sabka Malik Ek&rdquo;.</p>
+      <div class="footer-domain">saiatharidwar.com</div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/saiatharidwar/" target="_blank" rel="noopener" title="Instagram">&#x1F4F8;</a>
+        <a href="https://www.facebook.com/people/Sai-Temple-Bhupatwala-Haridwar/100067469740436/" target="_blank" rel="noopener" title="Facebook">&#x1F4D8;</a>
+        <a href="https://maps.app.goo.gl/inqPKtHPKZM3QvPt5" target="_blank" rel="noopener" title="Google Maps">&#x1F4CD;</a>
+      </div>
+    </div>
+    <div class="footer-links"><h5>Temple</h5><ul><li><a href="#about">About Temple</a></li><li><a href="#timings">Darshan Timings</a></li><li><a href="#events">Events Calendar</a></li><li><a href="#gallery">Photo Gallery</a></li><li><a href="#services">Seva &amp; Services</a></li></ul></div>
+    <div class="footer-links"><h5>Stay &amp; Visit</h5><ul><li><a href="#saidham">Sai Dham Dharamshala</a></li><li><a href="#contact">Contact Us</a></li><li><a href="#instagram">Instagram Feed</a></li><li><a href="https://maps.app.goo.gl/inqPKtHPKZM3QvPt5" target="_blank" rel="noopener">Get Directions</a></li></ul></div>
+    <div class="footer-links"><h5>Haridwar</h5><ul><li><a href="#">Har Ki Pauri</a></li><li><a href="#">Ganga Aarti</a></li><li><a href="#">Mansa Devi Temple</a></li><li><a href="#">Chandi Devi Temple</a></li><li><a href="#">How to Reach</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="mantra">&#x0950; &#x0938;&#x093E;&#x0908;&#x0902; &#x0936;&#x094D;&#x0930;&#x0940; &#x0938;&#x093E;&#x0908;&#x0902; &#x091C;&#x092F; &#x091C;&#x092F; &#x0938;&#x093E;&#x0908;&#x0902;</div>
+    <p>&copy; 2026 Shri Sai Baba Charitable Trust, Parashuram Ashram, Haridwar. All rights reserved. | saiatharidwar.com</p>
+  </div>
+</footer>
+<script>
+window.addEventListener('load',function(){setTimeout(function(){document.getElementById('preloader').classList.add('hidden')},1200)});
+window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>80)});
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active');document.getElementById('hamburger').classList.toggle('active')}
+var reveals=document.querySelectorAll('.reveal');
+var observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -50px 0px'});
+reveals.forEach(function(el){observer.observe(el)});
+document.querySelectorAll('.insta-post').forEach(function(post){post.addEventListener('click',function(){window.open('https://www.instagram.com/saiatharidwar/','_blank')})});
+</script>
+<!--
+  INSTAGRAM LIVE FEED INTEGRATION OPTIONS:
+  
+  Option 1: Elfsight (Easiest - elfsight.com)
+  - Create free Instagram Feed widget for @saiatharidwar
+  - Replace the .insta-feed div with their embed code
+  
+  Option 2: Behold.so (Free tier - behold.so)
+  - Connect Instagram account, get embed code
+  - Paste inside the #instagram section
+  
+  Option 3: SnapWidget (snapwidget.com)
+  - Free Instagram widget, enter username
+  - Copy iframe embed code
+  
+  Option 4: Instagram Basic Display API
+  - Register Meta Developer app
+  - Get long-lived token for @saiatharidwar
+  - Fetch /me/media and render dynamically
+-->
+</body>
+</html>
