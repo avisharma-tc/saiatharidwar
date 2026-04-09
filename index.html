@@ -118,6 +118,42 @@ section{padding:6rem 2rem}
 .event-month{font-family:'Cormorant Garamond',serif;font-size:.85rem;color:var(--saffron);letter-spacing:.3em;text-transform:uppercase;margin-bottom:.5rem;font-weight:600}
 .event-name{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--deep-maroon);margin-bottom:.5rem}
 .event-desc{font-size:.88rem;color:var(--text-muted);line-height:1.6}
+/* UPCOMING EVENT */
+#upcoming{background:linear-gradient(135deg,#2C1810 0%,var(--deep-maroon) 50%,#3D1520 100%);color:var(--cream);position:relative;overflow:hidden;padding:5rem 2rem}
+#upcoming::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 30px,rgba(212,168,67,.015) 30px,rgba(212,168,67,.015) 31px)}
+#upcoming .section-title{color:var(--cream)}
+#upcoming .section-label{color:var(--gold)}
+.upcoming-badge{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--saffron),var(--deep-saffron));color:#fff;padding:.5rem 1.5rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin:0 auto 1.5rem;animation:pulse-badge 2s ease-in-out infinite}
+@keyframes pulse-badge{0%,100%{box-shadow:0 0 0 0 rgba(232,112,26,.4)}50%{box-shadow:0 0 0 10px rgba(232,112,26,0)}}
+.upcoming-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--cream);text-align:center;margin-bottom:.5rem;line-height:1.2}
+.upcoming-title em{color:var(--gold);font-style:italic}
+.upcoming-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:rgba(240,222,180,.6);text-align:center;margin-bottom:3rem}
+.upcoming-dates{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1000px;margin:0 auto}
+.day-card{background:rgba(255,255,255,.04);border:1px solid rgba(212,168,67,.2);padding:0;overflow:hidden;transition:all .3s}
+.day-card:hover{background:rgba(255,255,255,.07);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.day-header{background:linear-gradient(135deg,rgba(232,112,26,.2),rgba(212,168,67,.15));padding:1.2rem 1.5rem;border-bottom:1px solid rgba(212,168,67,.15)}
+.day-header .day-label{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--gold);margin-bottom:.2rem}
+.day-header .day-date{font-size:.78rem;color:rgba(240,222,180,.5);letter-spacing:.15em;text-transform:uppercase}
+.day-body{padding:1.5rem}
+.program-item{display:flex;gap:.75rem;margin-bottom:1rem;align-items:flex-start}
+.program-item:last-child{margin-bottom:0}
+.program-time{min-width:90px;font-family:'Cormorant Garamond',serif;font-size:.9rem;color:var(--gold);font-weight:600;line-height:1.4;padding-top:1px}
+.program-detail{flex:1}
+.program-detail .prog-name{font-size:.85rem;color:var(--cream);font-weight:500;line-height:1.4}
+.program-detail .prog-desc{font-size:.78rem;color:rgba(240,222,180,.45);margin-top:.15rem;line-height:1.4}
+.program-highlight{background:linear-gradient(135deg,rgba(232,112,26,.15),rgba(232,112,26,.08));border:1px solid rgba(232,112,26,.25);padding:.75rem 1rem;margin:.75rem 0;border-radius:2px}
+.program-highlight .prog-name{color:var(--gold) !important;font-weight:700 !important}
+.upcoming-footer{text-align:center;margin-top:3rem;max-width:700px;margin-left:auto;margin-right:auto}
+.upcoming-contact{font-size:.88rem;color:rgba(240,222,180,.5);margin-bottom:1rem;line-height:1.7}
+.upcoming-contact strong{color:var(--gold);font-weight:600}
+.upcoming-phones{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem}
+.upcoming-phones a{color:var(--gold);text-decoration:none;font-size:.88rem;font-weight:600;transition:opacity .3s;font-family:'Cormorant Garamond',serif;font-size:1.05rem}
+.upcoming-phones a:hover{opacity:.7}
+.upcoming-guests{max-width:900px;margin:2.5rem auto 0;text-align:center}
+.upcoming-guests h4{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold);margin-bottom:1rem}
+.guest-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem}
+.guest-tag{background:rgba(212,168,67,.1);border:1px solid rgba(212,168,67,.2);padding:.4rem 1rem;font-size:.78rem;color:var(--light-gold);letter-spacing:.05em}
+@media(max-width:768px){.upcoming-dates{grid-template-columns:1fr}.program-time{min-width:75px}}
 #saidham{background:linear-gradient(135deg,#f8f1e4 0%,var(--ash) 100%);position:relative;overflow:hidden}
 .saidham-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center;max-width:1100px;margin:0 auto}
 .saidham-visual{position:relative;background:linear-gradient(135deg,var(--sacred-green),#1a3d28);padding:3rem;min-height:420px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
@@ -222,6 +258,16 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
 .footer-social{display:flex;gap:.75rem;margin-top:1rem}
 .footer-social a{width:36px;height:36px;border:1px solid rgba(212,168,67,.3);display:flex;align-items:center;justify-content:center;color:var(--gold);text-decoration:none;font-size:.85rem;transition:all .3s}
 .footer-social a:hover{background:var(--gold);color:var(--deep-maroon)}
+.footer-founder{max-width:1200px;margin:2.5rem auto 0;padding:2.5rem 0 0;border-top:1px solid rgba(212,168,67,.12);display:flex;align-items:center;gap:2rem;position:relative}
+.founder-photo{width:100px;height:100px;min-width:100px;border-radius:50%;overflow:hidden;border:2px solid rgba(212,168,67,.3);box-shadow:0 4px 20px rgba(0,0,0,.3)}
+.founder-photo img{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(.15)}
+.founder-info{flex:1}
+.founder-info .founder-label{font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.6;margin-bottom:.35rem}
+.founder-info h4{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--gold);line-height:1.3;margin-bottom:.25rem}
+.founder-info .founder-dates{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:rgba(240,222,180,.45);margin-bottom:.5rem}
+.founder-info p{font-size:.82rem;color:rgba(240,222,180,.45);line-height:1.6}
+.founder-flower{position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:2rem;opacity:.15}
+@media(max-width:600px){.footer-founder{flex-direction:column;text-align:center}.founder-flower{display:none}}
 .footer-bottom{text-align:center;padding-top:2.5rem;margin-top:2.5rem;border-top:1px solid rgba(212,168,67,.1);position:relative;max-width:1200px;margin-left:auto;margin-right:auto}
 .footer-bottom p{font-size:.78rem;color:rgba(240,222,180,.35);letter-spacing:.05em}
 .footer-bottom .mantra{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--gold);opacity:.5;margin-bottom:.5rem;letter-spacing:.2em}
@@ -268,7 +314,7 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
     <li><a href="#about">About</a></li>
     <li><a href="#timings">Darshan</a></li>
     <li><a href="#events">Events</a></li>
-    <li><a href="#saidham">Sai Dham</a></li>
+    <li><a href="#upcoming" style="color:var(--gold)">33rd Divas</a></li>
     <li><a href="#instagram">Instagram</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -290,7 +336,7 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
     <div class="hero-subtitle">Shri Sai Baba Charitable Trust &mdash; Haridwar</div>
     <h1 class="hero-title">The First Sai Baba Temple<br>in the Holy City of <em>Haridwar</em></h1>
     <p class="hero-desc">Nestled in the sacred heart of Bhupatwala, near Har Ki Pauri &mdash; serving devotees with love, faith and compassion since 1994.</p>
-    <div class="hero-cta"><a href="#timings" class="btn btn-primary">Darshan Timings</a><a href="#saidham" class="btn btn-outline">Stay at Sai Dham</a></div>
+    <div class="hero-cta"><a href="#upcoming" class="btn btn-primary">33rd Sthapana Divas &mdash; 3-5 May</a><a href="#timings" class="btn btn-outline">Darshan Timings</a></div>
   </div>
   <div class="scroll-indicator"><span>Scroll</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 12l6 6 6-6" stroke="#D4A843" stroke-width="1.5"/></svg></div>
 </section>
@@ -298,7 +344,7 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
   <div class="container">
     <div class="section-header reveal"><div class="section-label">Our Sacred Heritage</div><h2 class="section-title">About the Temple</h2><div class="section-divider"></div></div>
     <div class="about-grid">
-      <div class="about-image reveal"><div class="temple-icon">&#x1F64F;</div><div class="overlay-text">A beacon of faith since 1994</div></div>
+      <div class="about-image reveal"><img src="sai-baba-idol.jpg" alt="Shri Sai Baba idol on silver Simhasan adorned with marigold garlands at Sai Mandir Bhupatwala Haridwar" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"><div class="overlay-text" style="z-index:1">A beacon of faith since 1994</div></div>
       <div class="about-text reveal">
         <h3>Shri Sai Baba Mandir, Bhupatwala</h3>
         <p>This is the first Shirdi Sai Baba temple established in the holy city of Haridwar. The land for the Mandir was acquired in September 1990 in the name of Pt. Chunilal, and the Sai Baba Charitable Trust Parashuram Ashram was formed in September 1991.</p>
@@ -360,6 +406,99 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
     </div>
   </div>
 </section>
+<section id="upcoming">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:2.5rem">
+      <div class="upcoming-badge">&#x1F514; Upcoming Event</div>
+      <div class="section-label">3 &ndash; 5 May 2026</div>
+      <h2 class="upcoming-title">33rd Sthapana Divas Samaroh<br><em>Grand Foundation Day Celebration</em></h2>
+      <div class="upcoming-subtitle">&#x0936;&#x094D;&#x0930;&#x0940; &#x0938;&#x093E;&#x0908; &#x092E;&#x0928;&#x094D;&#x0926;&#x093F;&#x0930; &#x0939;&#x0930;&#x093F;&#x0926;&#x094D;&#x0935;&#x093E;&#x0930; &#x092E;&#x0947;&#x0902; 33 &#x0935;&#x093E;&#x0901; &#x0938;&#x094D;&#x0925;&#x093E;&#x092A;&#x0928;&#x093E; &#x0926;&#x093F;&#x0935;&#x0938; &#x0938;&#x092E;&#x093E;&#x0930;&#x094B;&#x0939; &bull; Vishal Shobha Yatra &bull; Bhavya Chandi ki Palki</div>
+      <div class="section-divider"></div>
+    </div>
+    <div class="upcoming-dates reveal">
+      <!-- DAY 1 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-label">Day 1 &mdash; Sunday</div>
+          <div class="day-date">3rd May 2026</div>
+        </div>
+        <div class="day-body">
+          <div class="program-item"><div class="program-time">5:30 AM</div><div class="program-detail"><div class="prog-name">Kakad Aarti</div></div></div>
+          <div class="program-item"><div class="program-time">6:00 AM</div><div class="program-detail"><div class="prog-name">Baba ka Mangal Snan</div></div></div>
+          <div class="program-item"><div class="program-time">12:00 PM</div><div class="program-detail"><div class="prog-name">Dopahar Aarti</div></div></div>
+          <div class="program-item"><div class="program-time">1:00 PM</div><div class="program-detail"><div class="prog-name">Langar Prasad</div></div></div>
+          <div class="program-item"><div class="program-time">4:00 PM</div><div class="program-detail"><div class="prog-name">Shri Sai Sat Charitra Parayan</div><div class="prog-desc">By Smt. Suman Malhotra &amp; Smt. Mamta Sharma</div></div></div>
+          <div class="program-item"><div class="program-time">6:00 PM</div><div class="program-detail"><div class="prog-name">Sai Bhajan Varsha</div></div></div>
+        </div>
+      </div>
+      <!-- DAY 2 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-label">Day 2 &mdash; Monday</div>
+          <div class="day-date">4th May 2026</div>
+        </div>
+        <div class="day-body">
+          <div class="program-item"><div class="program-time">5:30 AM</div><div class="program-detail"><div class="prog-name">Kakad Aarti</div></div></div>
+          <div class="program-item"><div class="program-time">6:00 AM</div><div class="program-detail"><div class="prog-name">Baba ka Mangal Snan</div></div></div>
+          <div class="program-item"><div class="program-time">8:00 AM</div><div class="program-detail"><div class="prog-name">Sai Bhakt Niwas 15th Anniversary</div><div class="prog-desc">Sai Naam Jap at Sai Bhakt Niwas &mdash; By Smt. Suman Malhotra</div></div></div>
+          <div class="program-item"><div class="program-time">9:00 AM</div><div class="program-detail"><div class="prog-name">Satya Narayan Puja &amp; Archana</div></div></div>
+          <div class="program-item"><div class="program-time">10:30 AM</div><div class="program-detail"><div class="prog-name">Bhajan Gayan</div></div></div>
+          <div class="program-item"><div class="program-time">12:00 PM</div><div class="program-detail"><div class="prog-name">Dopahar Aarti &amp; Langar Prasad</div></div></div>
+          <div class="program-highlight">
+            <div class="program-item" style="margin:0"><div class="program-time">2:00 PM</div><div class="program-detail"><div class="prog-name">Sai Palki Shobha Yatra</div><div class="prog-desc">Grand procession from Ramleela Maidan to Har Ki Pauri &amp; back to Sai Baba Mandir Bhupatwala &bull; Coordinator: Shri Sunil Nagpal Ji</div></div></div>
+          </div>
+          <div class="program-item"><div class="program-time">7:00 PM</div><div class="program-detail"><div class="prog-name">Sai Bhajan &mdash; Arvind Sai (Dehradun)</div></div></div>
+          <div class="program-item"><div class="program-time">9:00 PM</div><div class="program-detail"><div class="prog-name">Sai Bhajan Sandhya</div><div class="prog-desc">Doordarshan artists Shri Surendra Saxena &amp; Amit Saxena</div></div></div>
+        </div>
+      </div>
+      <!-- DAY 3 -->
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-label">Day 3 &mdash; Tuesday</div>
+          <div class="day-date">5th May 2026</div>
+        </div>
+        <div class="day-body">
+          <div class="program-item"><div class="program-time">6:00 AM</div><div class="program-detail"><div class="prog-name">Kakad Aarti</div></div></div>
+          <div class="program-item"><div class="program-time">7:00 AM</div><div class="program-detail"><div class="prog-name">Udi Snan</div></div></div>
+          <div class="program-item"><div class="program-time">7:30 AM</div><div class="program-detail"><div class="prog-name">108 Gangajal Kalash Abhishek Samaroh</div></div></div>
+          <div class="program-highlight">
+            <div class="program-item" style="margin:0"><div class="program-time">8:00 AM</div><div class="program-detail"><div class="prog-name">1008 Litre Doodh &amp; Makhan se Baba ka Mangal Snan</div></div></div>
+          </div>
+          <div class="program-highlight">
+            <div class="program-item" style="margin:0"><div class="program-time">7:30 AM</div><div class="program-detail"><div class="prog-name">Baba ka 56 Bhog Samaroh &amp; Sai Bhajan</div><div class="prog-desc">By Shri Surendra Saxena, Amit Saxena &amp; Arvind Sai (Dehradun)</div></div></div>
+          </div>
+          <div class="program-item"><div class="program-time">12:00 PM</div><div class="program-detail"><div class="prog-name">Dopahar Aarti</div></div></div>
+          <div class="program-item"><div class="program-time">2:00 PM</div><div class="program-detail"><div class="prog-name">Langar Prasad &amp; Samapan Samaroh</div><div class="prog-desc">Sai Sevako ki Fauj Bhakton ko karaegi mauj!</div></div></div>
+        </div>
+      </div>
+    </div>
+    <!-- GUESTS & CONTACT -->
+    <div class="upcoming-guests reveal">
+      <h4>Chief Guests &amp; Dignitaries</h4>
+      <div class="guest-tags">
+        <div class="guest-tag">Shri Madan Kaushik (Cabinet Minister, Uttarakhand)</div>
+        <div class="guest-tag">Smt. Sunita Sharma (Parshad, Nagar Nigam Haridwar)</div>
+        <div class="guest-tag">Smt. Kiran Jaisal Ki (Mayor, Haridwar)</div>
+        <div class="guest-tag">Shri Kailash Keswani</div>
+        <div class="guest-tag">Shri Arun Sahgal &amp; Smt. Neeru Sahgal (Samaj Sevi)</div>
+      </div>
+    </div>
+    <div class="upcoming-footer reveal">
+      <div class="upcoming-contact">
+        <strong>Managing Trustee:</strong> Smt. Priya Datta<br>
+        <strong>Mandir Prabhandhak (Bhakt Niwas):</strong> Shri M.M. Kapur
+      </div>
+      <div class="upcoming-phones">
+        <a href="tel:+919810038721">9810038721</a>
+        <a href="tel:+919810032033">9810032033</a>
+        <a href="tel:+917838355999">7838355999</a>
+        <a href="tel:+919557747502">09557747502</a>
+        <a href="tel:+919760787616">09760787616</a>
+      </div>
+      <a href="#contact" class="btn btn-primary" style="border-radius:0">Enquire About the Event</a>
+    </div>
+  </div>
+</section>
 <section id="saidham">
   <div class="container">
     <div class="section-header reveal"><div class="section-label">Devotee Accommodation</div><h2 class="section-title">Stay at Sai Dham</h2><div class="section-divider"></div></div>
@@ -417,24 +556,14 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
       <h2 class="section-title">Instagram Feed</h2>
       <div class="section-divider"></div>
     </div>
-    <div class="insta-feed reveal">
-      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F64F;</span><span>Morning Aarti</span></div></div>
-      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1FA94;</span><span>Dhuni Darshan</span></div></div>
-      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F3B5;</span><span>Bhajan Sandhya</span></div></div>
-      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F338;</span><span>Festival Decor</span></div></div>
-      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F372;</span><span>Annadanam</span></div></div>
-      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F305;</span><span>Ganga at Sunrise</span></div></div>
-      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F4FF;</span><span>Sai Satcharitra</span></div></div>
-      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F3DB;</span><span>Temple View</span></div></div>
-      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x2728;</span><span>Baba's Blessings</span></div></div>
-      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F38A;</span><span>Guru Purnima</span></div></div>
-      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F33A;</span><span>Flower Offerings</span></div></div>
-      <div class="insta-post"><div class="insta-placeholder"><span class="ip-icon">&#x1F549;</span><span>Om Sai Ram</span></div></div>
+    <!-- Elfsight Instagram Feed | Sai at Haridwar -->
+    <div class="reveal" style="max-width:1200px;margin:0 auto">
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-d851473d-9134-4d75-a6df-d9ef8e4c3966" data-elfsight-app-lazy></div>
     </div>
-    <div class="insta-follow-bar reveal">
+    <div class="insta-follow-bar reveal" style="margin-top:2rem">
       <a href="https://www.instagram.com/saiatharidwar/" target="_blank" rel="noopener" class="btn-insta"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Follow @saiatharidwar on Instagram</a>
     </div>
-    <p class="insta-note">For live Instagram feed integration, use Elfsight, Behold.so, or SnapWidget &mdash; see HTML comments for setup instructions.</p>
   </div>
 </section>
 <section id="services">
@@ -460,7 +589,7 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
         <div class="contact-detail"><div class="cd-icon">&#x1F550;</div><div class="cd-text"><strong>Temple Hours</strong><span>6:00 AM &mdash; 9:30 PM (All days)</span></div></div>
         <div class="contact-detail"><div class="cd-icon">&#x1F310;</div><div class="cd-text"><strong>Website</strong><span><a href="https://saiatharidwar.com">saiatharidwar.com</a></span></div></div>
         <div class="contact-detail"><div class="cd-icon">&#x1F4F8;</div><div class="cd-text"><strong>Instagram</strong><span><a href="https://www.instagram.com/saiatharidwar/" target="_blank" rel="noopener">@saiatharidwar</a></span></div></div>
-        <div class="contact-detail"><div class="cd-icon">&#x1F4E7;</div><div class="cd-text"><strong>Email</strong><span><a href="mailto:info@saiatharidwar.com">info@saiatharidwar.com</a></span></div></div>
+        <div class="contact-detail"><div class="cd-icon">&#x1F4E7;</div><div class="cd-text"><strong>Email</strong><span><a href="/cdn-cgi/l/email-protection#761f1810193605171f17021e17041f120117045815191b"><span class="__cf_email__" data-cfemail="a4cdcac2cbe4d7c5cdc5d0ccc5d6cdc0d3c5d68ac7cbc9">[email&#160;protected]</span></a></span></div></div>
         <div class="contact-detail"><div class="cd-icon">&#x1F4CC;</div><div class="cd-text"><strong>Nearby Landmark</strong><span>Near Har Ki Pauri &mdash; the sacred heart of Haridwar</span></div></div>
         <div class="contact-detail"><div class="cd-icon">&#x1F3E0;</div><div class="cd-text"><strong>Sai Dham Dharamshala</strong><span>Adjacent to temple &mdash; affordable rooms for devotees.<br><a href="#saidham">View details &rarr;</a></span></div></div>
       </div>
@@ -500,12 +629,22 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
     <div class="footer-links"><h5>Stay &amp; Visit</h5><ul><li><a href="#saidham">Sai Dham Dharamshala</a></li><li><a href="#contact">Contact Us</a></li><li><a href="#instagram">Instagram Feed</a></li><li><a href="https://maps.app.goo.gl/inqPKtHPKZM3QvPt5" target="_blank" rel="noopener">Get Directions</a></li></ul></div>
     <div class="footer-links"><h5>Haridwar</h5><ul><li><a href="#">Har Ki Pauri</a></li><li><a href="#">Ganga Aarti</a></li><li><a href="#">Mansa Devi Temple</a></li><li><a href="#">Chandi Devi Temple</a></li><li><a href="#">How to Reach</a></li></ul></div>
   </div>
+  <div class="footer-founder">
+    <div class="founder-photo"><img src="subhash-dutta-ji.jpg" alt="Late Shri Subhash Chander Dutta Ji - Founder Managing Trustee"></div>
+    <div class="founder-info">
+      <div class="founder-label">In Loving Memory</div>
+      <h4>Late Shri Subhash Chander Dutta Ji</h4>
+      <div class="founder-dates">19 December 1946 &mdash; 10 May 2021</div>
+      <p>Founder &amp; Managing Trustee of Shri Sai Baba Charitable Trust, Parashuram Ashram, Haridwar. His lifelong devotion to Sai Baba and selfless service to the community laid the foundation of this sacred temple. His vision and dedication continue to inspire every devotee who walks through these doors. Om Sai Ram.</p>
+    </div>
+    <div class="founder-flower">&#x1F33A;</div>
+  </div>
   <div class="footer-bottom">
     <div class="mantra">&#x0950; &#x0938;&#x093E;&#x0908;&#x0902; &#x0936;&#x094D;&#x0930;&#x0940; &#x0938;&#x093E;&#x0908;&#x0902; &#x091C;&#x092F; &#x091C;&#x092F; &#x0938;&#x093E;&#x0908;&#x0902;</div>
     <p>&copy; 2026 Shri Sai Baba Charitable Trust, Parashuram Ashram, Haridwar. All rights reserved. | saiatharidwar.com</p>
   </div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 window.addEventListener('load',function(){setTimeout(function(){document.getElementById('preloader').classList.add('hidden')},1200)});
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>80)});
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active');document.getElementById('hamburger').classList.toggle('active')}
@@ -526,13 +665,4 @@ document.querySelectorAll('.insta-post').forEach(function(post){post.addEventLis
   - Paste inside the #instagram section
   
   Option 3: SnapWidget (snapwidget.com)
-  - Free Instagram widget, enter username
-  - Copy iframe embed code
   
-  Option 4: Instagram Basic Display API
-  - Register Meta Developer app
-  - Get long-lived token for @saiatharidwar
-  - Fetch /me/media and render dynamically
--->
-</body>
-</html>
